@@ -40,9 +40,8 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
           {
             position : "bottomMiddle",
             maxWidth : 550,
-            title : "Welcome to mindmaps",
-            content : "Hello there, it seems like you are new here! These bubbles "
-                + "will guide you through the app. Or they won't if you want to skip this tutorial and <a class='skip-tutorial link'>click here<a/>."
+            title : "欢迎使用思维导图",
+            content : "Hello，看来你是新来的！这些气泡将引导您学会怎么用。或者 <a class='skip-tutorial link'>点击这里<a/>跳过引导。"
           });
       notifications.push(helpMain);
       helpMain.$().find("a.skip-tutorial").click(function() {
@@ -63,8 +62,8 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
             position : "bottomMiddle",
             closeButton : true,
             maxWidth : 350,
-            title : "This is where you start - your main idea",
-            content : "Double click the idea to change what it says. This will be the main topic of your mind map."
+            title : "这是你开始的地方 - 你的第一个Idea",
+            content : "双击节点更改内容。这将是你思维导图的主题。"
           });
       notifications.push(helpRoot);
 
@@ -85,9 +84,9 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
             closeButton : true,
             maxWidth : 350,
             padding : 20,
-            title : "Creating new ideas",
-            content : "Now it's time to build your mind map.<br/> Move your mouse over the idea, click and then drag"
-                + " the <span style='color:red'>red circle</span> away from the root. This is how you create a new branch."
+            title : "创建新的Idea",
+            content : "现在你可以开始思维风暴了<br/> 鼠标移动到节点上，点击然后拖拽"
+                + "这个<span style='color:red'>红点</span>就可以创建新的分支了。"
           });
       notifications.push(helpNub);
       eventBus.once(mindmaps.Event.NODE_CREATED, function() {
@@ -107,9 +106,8 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
             position : "bottomMiddle",
             closeButton : true,
             maxWidth : 350,
-            title : "Your first branch",
-            content : "Great! This is easy, right? The red circle is your most important tool. Now, you can move your idea"
-                + " around by dragging it or double click to change the text again."
+            title : "创建第一个分支",
+            content : "完美! 是不是很简单？红点点是你最重要的工具。现在你可以通过拖动节点或双击修改文本。"
           });
       notifications.push(helpNewNode);
       setTimeout(inspector, 2000);
@@ -134,8 +132,8 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
             closeButton : true,
             maxWidth : 350,
             expires : 10000,
-            title : "Navigation",
-            content : "You can click and drag the background of the map to move around. Use your mousewheel or slider over there to zoom in and out."
+            title : "导航预览",
+            content : "您可以单击并拖动小地图的背景来进行移动，还可以使用鼠标滚轮或滑块放大和缩小。"
           });
       notifications.push(helpNavigate);
     }
@@ -151,9 +149,8 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
             closeButton : true,
             maxWidth : 350,
             padding : 20,
-            title : "Don't like the colors?",
-            content : "Use these controls to change the appearance of your ideas. "
-                + "Try clicking the icon in the upper right corner to minimize this panel."
+            title : "不喜欢这个颜色?",
+            content : "使用这些控件来更改节点的外观。尝试单击右上角的图标可以最小化面板。"
           });
       notifications.push(helpInspector);
     }
@@ -169,9 +166,8 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
             closeButton : true,
             maxWidth : 350,
             padding : 20,
-            title : "The tool bar",
-            content : "Those buttons do what they say. You can use them or work with keyboard shortcuts. "
-                + "Hover over the buttons for the key combinations."
+            title : "工具栏",
+            content : "鼠标悬停可以看到快捷键"
           });
       notifications.push(helpToolbar);
     }
@@ -186,9 +182,8 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
             position : "leftTop",
             closeButton : true,
             maxWidth : 350,
-            title : "Save your work",
-            content : "The button to the right opens a menu where you can save your mind map or start working "
-                + "on another one if you like."
+            title : "保存",
+            content : "点击鼠标右键可以打开菜单，可以进行保存导出等操作"
           });
       notifications.push(helpMenu);
     }
@@ -268,7 +263,7 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
             position : "bottomLeft",
             closeButton : true,
             maxWidth : 350,
-            title : "This is your toolbar",
+            title : "这是工具栏",
             content : "Those buttons do what they say. You can use them or work with keyboard shortcuts. "
                 + "Hover over the buttons for the key combinations."
           });

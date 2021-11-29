@@ -11,7 +11,7 @@
 <meta name="description" content="mindmaps is an HTML5 based mind mapping app. It lets you create neat looking mind maps in the browser." />
 <meta name="keywords" content="mind maps html5 mindmaps offline easy intuitive" />
 <meta name="google" content="notranslate"/>
-<title>mindmaps</title>
+<title>思维导图</title>
 <link rel="icon" type="image/png" href="img/favicon.png" />
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/app.css">
@@ -52,28 +52,28 @@
 </script>
 
 <script id="template-open" type="text/x-jquery-tmpl">
-<div id="open-dialog" class="file-dialog" title="Open mind map">
-  <h1><span class="highlight">Works again!</span> In the Cloud: Dropbox and more</h1>
-  <p>Open, save and share your mind maps online in your favorite cloud storage. Supports Google Drive, Dropbox and more! Powered by <a href="https://www.filestack.com/" target="_blank">filestack.com</a>.</p>
-  <button id="button-open-cloud">Open</button>
+<div id="open-dialog" class="file-dialog" title="打开思维导图">
+  <h1><span class="highlight">Works again!</span> 云文件: Dropbox ...</h1>
+  <p>在您喜爱的云存储中在线打开、保存和共享您的思维导图。支持 Google Drive、Dropbox 等！ 由 <a href="https://www.filestack.com/" target="_blank">filestack.com</a>提供支持.</p>
+  <button id="button-open-cloud">打开</button>
   <span class="cloud-loading">Loading...</span>
   <span class="cloud-error error"></span>
   <div class="seperator"></div>
-  <h1>Local Storage</h1>
-  <p>This is a list of all mind maps that are saved in your browser's local storage. Click on the title of a map to open it.</p>
+  <h1>浏览器存储</h1>
+  <p>这是保存在浏览器本地存储中的所有思维导图的列表。单击思维导图标题将其打开。</p>
   <table class="localstorage-filelist">
     <thead>
       <tr>
-        <th class="title">Title</th>
-        <th class="modified">Last Modified</th>
+        <th class="title">文件名</th>
+        <th class="modified">修改时间</th>
         <th class="delete"></th>
       </tr>
     </thead>
     <tbody class="document-list"></tbody>
   </table>
   <div class="seperator"></div>
-  <h1>From file</h1>
-  <p>Choose a mind map from your computer's hard drive.</p>
+  <h1>本地文件</h1>
+  <p>从硬盘中选择一个思维导图。</p>
   <div class="file-chooser">
     <input type="file" />
   </div>
@@ -127,7 +127,7 @@
   <div id="inspector-content">
     <table id="inspector-table">
       <tr>
-        <td>Font size:</td>
+        <td>字体大小:</td>
         <td><div
             class="buttonset buttons-very-small buttons-less-padding">
             <button id="inspector-button-font-size-decrease">A-</button>
@@ -135,7 +135,7 @@
           </div></td>
       </tr>
       <tr>
-        <td>Font style:</td>
+        <td>字体样式:</td>
         <td><div
             class="font-styles buttonset buttons-very-small buttons-less-padding">
             <input type="checkbox" id="inspector-checkbox-font-bold" /> 
@@ -159,12 +159,12 @@
         </td>
       </tr>
       <tr>
-        <td>Font color:</td>
+        <td>字体颜色:</td>
         <td><input type="hidden" id="inspector-font-color-picker"
           class="colorpicker" /></td>
       </tr>
       <tr>
-        <td>Branch color:</td>
+        <td>分支颜色:</td>
         <td><input type="hidden" id="inspector-branch-color-picker"
           class="colorpicker" />
           <button id="inspector-button-branch-color-children" title="Apply branch color to all children" class="right buttons-small buttons-less-padding">Inherit</button>
@@ -177,8 +177,7 @@
 
 <script id="template-export-map" type="text/x-jquery-tmpl">
 <div id="export-map-dialog" title="Export mind map">
-  <h2 class='image-description'>To download the map right-click the
-    image and select "Save Image As"</h2>
+  <h2 class='image-description'>要下载思维导图，请右键单击图片并选择“将图像另存为”</h2>
   <div id="export-preview"></div>
 </div>
 </script>
@@ -218,12 +217,12 @@
       <div id="drawing-area" class="no-select"></div>
     </div>
     <div id="bottombar">
-      <div id="about">
+      <!-- <div id="about">
         <a href="about.html" target="_blank">About mindmaps</a> <span
           style="padding: 0 4px;">|</span> <a style="font-weight: bold"
           href="https://docs.google.com/forms/d/e/1FAIpQLSfETMwnwQQXx9aAEFA26jbuBJGkU9zLCW7Rj1Taf5u3k-2NYQ/viewform?usp=sf_link"
           target="_blank">Leave Feedback</a>
-      </div>
+      </div> -->
       <div id="statusbar">
         <div
           class="buttons buttons-right buttons-small buttons-less-padding"></div>

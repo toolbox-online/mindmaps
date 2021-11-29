@@ -1,0 +1,33 @@
+name: Deploy
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ deploy ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: A job to deploy.
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Build App
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        cache: 'npm'
+    - run: npm install && npm run build
+    - name: Install ssh-key
+      uses: kielabokkie/ssh-key-and-known-hosts-action@v1
+      with:
+        ssh-private-key: ${{ secrets.ID_RSA }}
+        ssh-host: tool.hufeifei.cn
+    - name: Deploy App
+      run: |
+        echo "${{ secrets.ID_RSA }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-add ~/.ssh/id_rsa
+        ssh-keyscan -t rsa tool.hufeifei.cn >> ~/.ssh/known_hosts
+        export APP_DIR=/certbot-nginx-docker/html/tool.hufeifei.cn/mind-map/
+        ssh -i ~/.ssh/id_rsa www@tool.hufeifei.cn -t "rm -rf $APP_DIR && mkdir -p $APP_DIR"
+        scp -i ~/.ssh/id_rsa -r dist/* www@tool.hufeifei.cn:$APP_DIR

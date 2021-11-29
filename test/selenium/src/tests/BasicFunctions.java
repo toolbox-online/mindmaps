@@ -21,7 +21,7 @@ public class BasicFunctions extends BaseMindMapsTestCase {
 		String nodeId = createNodeFromRoot();
 		assertTrue(selenium.isElementPresent(nodeId));
 
-		assertEquals("New Idea", selenium.getText(nodeId));
+		assertEquals("新主题", selenium.getText(nodeId));
 		assertTrue(selenium.isElementPresent(new Node(nodeId).text().selected()
 				.get()));
 	}

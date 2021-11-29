@@ -157,7 +157,7 @@ mindmaps.MainViewController = function(eventBus, mindmapModel, commandRegistry) 
     inspectorPresenter.go();
 
     var inspectorPanel = fpf
-        .create("Inspector", inspectorView.getContent());
+        .create("审查属性", inspectorView.getContent());
     inspectorPanel.show();
     statusbarPresenter.addEntry(inspectorPanel);
 
@@ -167,7 +167,7 @@ mindmaps.MainViewController = function(eventBus, mindmapModel, commandRegistry) 
         canvasContainer, zoomController);
     naviPresenter.go();
 
-    var navigatorPanel = fpf.create("Navigator", naviView.getContent());
+    var navigatorPanel = fpf.create("导航预览", naviView.getContent());
     navigatorPanel.show();
     statusbarPresenter.addEntry(navigatorPanel);
   };

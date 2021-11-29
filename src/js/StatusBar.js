@@ -96,7 +96,7 @@ mindmaps.StatusNotificationController = function(eventBus, view) {
     var n = new mindmaps.Notification($anchor, {
       position : "topRight",
       expires : 3500,
-      content : "Mind map saved"
+      content : "思维导图已保存"
     });
   });
   

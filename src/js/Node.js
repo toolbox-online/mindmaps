@@ -8,7 +8,7 @@ mindmaps.Node = function() {
   this.parent = null;
   this.children = new mindmaps.NodeMap();
   this.text = {
-    caption : "New Idea",
+    caption : "新主题",
     font : {
       style : "normal",
       weight : "normal",
