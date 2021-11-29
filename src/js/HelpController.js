@@ -228,9 +228,9 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
             position : "bottomLeft",
             closeButton : true,
             maxWidth : 350,
-            title : "This is your main idea",
-            content : "Double click an idea to edit its text. Move the mouse over "
-                + "an idea and drag the red circle to create a new idea."
+            title : "这是主题",
+            content : "双击节点更改内容。鼠标移动到节点上，点击然后拖拽"
+            + "这个<span style='color:red'>红点</span>就可以创建新的分支了。"
           });
 
       var helpNavigator = new mindmaps.Notification(
@@ -240,9 +240,8 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
             closeButton : true,
             maxWidth : 350,
             padding : 20,
-            title : "This is the navigator",
-            content : "Use this panel to get an overview of your map. "
-                + "You can navigate around by dragging the red rectangle or change the zoom by clicking on the magnifier buttons."
+            title : "导航预览",
+            content : "您可以单击并拖动小地图的背景来进行移动，还可以使用鼠标滚轮或滑块放大和缩小。"
           });
 
       var helpInspector = new mindmaps.Notification(
@@ -252,9 +251,8 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
             closeButton : true,
             maxWidth : 350,
             padding : 20,
-            title : "This is the inspector",
-            content : "Use these controls to change the appearance of your ideas. "
-                + "Try clicking the icon in the upper right corner to minimize this panel."
+            title : "这是属性编辑",
+            content : "使用这些控件来更改节点的外观。尝试单击右上角的图标可以最小化面板。"
           });
 
       var helpToolbar = new mindmaps.Notification(
@@ -264,8 +262,7 @@ mindmaps.HelpController = function(eventBus, commandRegistry) {
             closeButton : true,
             maxWidth : 350,
             title : "这是工具栏",
-            content : "Those buttons do what they say. You can use them or work with keyboard shortcuts. "
-                + "Hover over the buttons for the key combinations."
+            content : "鼠标悬停可以看到快捷键"
           });
 
       notifications.push(helpRoot, helpNavigator, helpInspector,
